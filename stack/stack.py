@@ -2,7 +2,7 @@
 A stack is a data structure whose primary purpose is to store and
 return elements in Last In First Out order. 
 
-1. Implement the Stack class using an array as the underlying storage structure.
+1. Implement the Stack class using an array as the underlying size structure.
    Make sure the Stack tests pass.
 2. Re-implement the Stack class, this time using the linked list implementation
    as the underlying storage structure.
@@ -11,22 +11,21 @@ return elements in Last In First Out order.
    implementing a Stack?
 """
 class Stack:
-    def __init__(self, storage = []):
-        self.size = 0
-        self.storage = storage
+    def __init__(self):
+        self.size = []
 
     def __len__(self):
-        if self.storage is None:
+        if self.size is None:
             return None
         else:
-            return len(self.storage)
+            return len(self.size)
 
     def push(self, value):
-        self.storage.append(value)
+        self.size.append(value)
 
     def pop(self):
-        if len(self.storage) == 0:
+        if len(self.size) == 0:
             return None
         else:
-            return self.storage.pop()
+            return self.size.pop()
         
